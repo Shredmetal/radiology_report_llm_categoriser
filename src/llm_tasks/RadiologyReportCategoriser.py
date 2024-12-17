@@ -19,14 +19,14 @@ class RadiologyReportCategoriser:
         laterality_chain = self.laterality_prompt | self.llm | self.output_parser
         size_chain = self.size_prompt | self.llm | self.output_parser
 
-        presence_result = presence_chain.invoke({"report": report}).strip().lower()
+        presence_result = presence_chain.invoke({"report": report}).strip("'\"").lower()
 
         if presence_result == "false":
             laterality_result = "not applicable"
             size_result = "not applicable"
         else:
-            laterality_result = laterality_chain.invoke({"report": report}).strip().lower()
-            size_result = size_chain.invoke({"report": report}).strip().lower()
+            laterality_result = laterality_chain.invoke({"report": report}).strip("'\"").lower()
+            size_result = size_chain.invoke({"report": report}).strip("'\"").lower()
 
         return {
             "report": report,
