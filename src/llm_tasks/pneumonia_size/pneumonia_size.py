@@ -20,8 +20,8 @@ class PneumoniaSize:
         human_message = HumanMessagePromptTemplate.from_template(
             """Here is the radiology report: {report}
 
-            Based on this report, what is the size of the pneumonia? Remember to answer only 'small', 'medium', 
-            'large', or 'not applicable' as failing to do so can cause harm to the patient. DO NOT DEVIATE FROM THIS 
+            Based on this report, what is the size of the pneumonia? Remember to answer only 'small', 'medium', or 
+            'large' as failing to do so can cause harm to the patient. DO NOT DEVIATE FROM THIS 
             FORMAT - IT IS A LIFE AND DEATH SITUATION."""
         )
 
