@@ -1,4 +1,6 @@
 import os
+from tqdm import tqdm
+
 
 from src.csv_handler.csv_handler import CSVHandler
 from src.llm_manager.llm_config import LLMConfig
@@ -28,8 +30,7 @@ if __name__ == "__main__":
 
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
-    for report in reports:
+    for report in tqdm(reports, desc="Processing reports"):
         categorised_report = report_categoriser.categorise_report(report)
-        print(categorised_report)
         CSVHandler.write_to_csv(categorised_report, save_path)
 
