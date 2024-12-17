@@ -14,8 +14,8 @@ class PneumoniaPresence:
             2. "false" if the radiologist has not reported the existence of pneumonia, or
             3. "possible" if you are the radiologist indicates a probability but not a certainty.
 
-            Any other type of response can cause harm to the patient, which as an expert medical assistant, you must 
-            prevent."""
+            Any other type of response can cause serious and irreparable harm to the patient, which as an expert 
+            medical assistant, you must prevent."""
         )
 
         human_message = HumanMessagePromptTemplate.from_template(

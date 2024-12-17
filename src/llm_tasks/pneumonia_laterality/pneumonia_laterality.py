@@ -13,8 +13,8 @@ class PneumoniaLaterality:
             2. "bilateral" if the radiologist has reported pneumonia affecting both lungs, or
             3. "insufficient information" if the information in the report provided is insufficient to determine laterality
 
-            Any other type of response can cause harm to the patient, which as an expert medical assistant, you must 
-            prevent."""
+            Any other type of response can cause serious and irreparable harm to the patient, which as an expert 
+            medical assistant, you must prevent."""
         )
 
         human_message = HumanMessagePromptTemplate.from_template(

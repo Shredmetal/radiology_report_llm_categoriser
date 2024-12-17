@@ -14,8 +14,8 @@ class PneumoniaSize:
             3. "large" if the radiologist has reported large, extensive, or severe pneumonia, or
             4. "insufficient information" if the information in the report provided is insufficient to determine the size of pneumonia
 
-            Any other type of response can cause harm to the patient, which as an expert medical assistant, you must 
-            prevent."""
+            Any other type of response can cause serious and irreparable harm to the patient, which as an expert 
+            medical assistant, you must prevent."""
         )
 
         human_message = HumanMessagePromptTemplate.from_template(
