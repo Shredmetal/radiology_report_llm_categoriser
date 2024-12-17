@@ -21,8 +21,8 @@ class PneumoniaLaterality:
             """Here is the radiology report: {report}
 
             Based on this report, what is the laterality of the pneumonia? Remember to answer only 'unilateral',
-            'bilateral', or 'insufficient information' as failing to do so can cause harm to the patient, DO NOT 
-            DEVIATE FROM THIS FORMAT - IT IS A LIFE AND DEATH SITUATION."""
+            'bilateral', or 'insufficient information' as failing to do so can cause serious and irreparable harm to 
+            the patient, DO NOT DEVIATE FROM THIS FORMAT - IT IS A LIFE AND DEATH SITUATION."""
         )
 
         chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])

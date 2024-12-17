@@ -21,9 +21,9 @@ class PneumoniaPresence:
         human_message = HumanMessagePromptTemplate.from_template(
             """Here is the radiology report: {report}
 
-            Based on this report, is there evidence of pneumonia? Remember to answer only 'true', 'false', or 'possible' 
-            as failing to do so can cause harm to the patient. DO NOT DEVIATE FROM THIS FORMAT - IT IS A LIFE AND 
-            DEATH SITUATION."""
+            Based on this report, is there evidence of pneumonia? Remember to answer only with 'true', 'false', or 
+            'possible' as failing to do so can cause serious and irreparable harm to the patient. DO NOT DEVIATE FROM 
+            THIS FORMAT - IT IS A LIFE AND DEATH SITUATION."""
         )
 
         chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])

@@ -13,7 +13,7 @@ if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
     radiology_reports_csv_path = os.path.join(current_dir, "..", "data_source", "ReportsDATASET.csv")
-    save_path = os.path.join(current_dir, "..", "data_output", "ReportsDATASET_processed_v2.csv")
+    save_path = os.path.join(current_dir, "..", "data_output", "ReportsDATASET_processed_v4.csv")
 
     reports = CSVHandler.read_csv(radiology_reports_csv_path)
 
