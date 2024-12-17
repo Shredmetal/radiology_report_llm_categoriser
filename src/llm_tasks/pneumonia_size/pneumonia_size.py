@@ -10,8 +10,9 @@ class PneumoniaSize:
 
             Important: You can only respond with EXACTLY:
             1. "small" if the radiologist has reported small or minimal pneumonia,
-            2. "medium" if the radiologist has reported moderate or intermediate pneumonia, or
-            3. "large" if the radiologist has reported large, extensive, or severe pneumonia
+            2. "medium" if the radiologist has reported moderate or intermediate pneumonia, 
+            3. "large" if the radiologist has reported large, extensive, or severe pneumonia, or
+            4. "insufficient information" if the information in the report provided is insufficient to determine the size of pneumonia
 
             Any other type of response can cause harm to the patient, which as an expert medical assistant, you must 
             prevent."""
@@ -20,9 +21,9 @@ class PneumoniaSize:
         human_message = HumanMessagePromptTemplate.from_template(
             """Here is the radiology report: {report}
 
-            Based on this report, what is the size of the pneumonia? Remember to answer only 'small', 'medium', or 
-            'large' as failing to do so can cause harm to the patient. DO NOT DEVIATE FROM THIS 
-            FORMAT - IT IS A LIFE AND DEATH SITUATION."""
+            Based on this report, what is the size of the pneumonia? Remember to answer only 'small', 'medium', 
+            'large', or 'insufficient information' as failing to do so can cause harm to the patient. DO NOT DEVIATE 
+            FROM THIS FORMAT - IT IS A LIFE AND DEATH SITUATION."""
         )
 
         chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])

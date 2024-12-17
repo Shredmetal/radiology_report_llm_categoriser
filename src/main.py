@@ -13,14 +13,14 @@ if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
     radiology_reports_csv_path = os.path.join(current_dir, "..", "data_source", "ReportsDATASET.csv")
-    save_path = os.path.join(current_dir, "..", "data_output", "ReportsDATASET_processed.csv")
+    save_path = os.path.join(current_dir, "..", "data_output", "ReportsDATASET_processed_v2.csv")
 
     reports = CSVHandler.read_csv(radiology_reports_csv_path)
 
     llm_config = LLMConfig(
         provider=LLMProvider.GEMMA,
         temperature=0.0,
-        max_tokens=8,
+        max_tokens=4,
         gpu_layer_offload_count=47
     )
 
